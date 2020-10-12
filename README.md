@@ -11,7 +11,7 @@ In this tutorial we are going to spend some time interacting with the Webex XML 
 ## Create a Meeting and Parse the Results
 
 ### 1. Meeting Details XML
-The most basic function you might want to invoke with Webex is to create a meeting. This can be done with the [CreateMeeting]https://developer.cisco.com/docs/webex-xml-api-reference-guide/#!createmeeting) command. Assuming you have some exposure to the Webex XML API you know that there are 2 key items you will need in the XML: 
+The most basic function you might want to invoke with Webex is to create a meeting. This can be done with the [CreateMeeting](https://developer.cisco.com/docs/webex-xml-api-reference-guide/#!createmeeting) command. Assuming you have some exposure to the Webex XML API you know that there are 2 key items you will need in the XML: 
 
 1. The Security Context details. In the most simple cases this will be the sitename, your webexid and your password. For the example below, the username is 'steven', the password is 'testing123!' and the site is 'my-sample-site.webex.com'. 
 2. Some basic details of your meeting (e.g. date, time, title, password, etc). In the example below the meeting password is 'mp-123!', the title is 'Sample Meeting' and the start date & time are '12/02/2020 @2:15pm'. 
