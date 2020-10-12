@@ -125,7 +125,7 @@ Copy the above two snippets of code into your favorite development friendly edit
 </serv:message>
 ```
 
-Note: Each time you run this command you will be creating a new meeting. Depending on your environment, you may want to clean those up (see next section)
+Note: Each time you run this command you will be creating a new meeting. Depending on your environment, you may want to clean those up (or see later on in this lab). 
 
 ### 4. Parse the Response
 
