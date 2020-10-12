@@ -6,7 +6,7 @@ In this tutorial we are going to spend some time interacting with the Webex XML 
 
 1. This lab assumes that you already have some familiarity with the [Webex XML API](https://developer.cisco.com/docs/webex-meetings/#!xml-api). Before coding against the API, you can go through [this learning lab](https://developer.cisco.com/learning/lab/collab-webex/step/1) to get some exposure. 
 2. Have node.js installed, and have some experience with it. Need an intro to Node.js? See [nodeschool.io](nodeschoo.io). 
-3. Have a webex site to test against. While any site can be used, the easiest to test and learn on is one where SSO is NOT enabled. The below assumes you will be using a site with a simple username & password (others can be used, you'll just have to do a little more leg work). If you don't have a site you can always the [developer sandbox provided on DevNet's page](https://devnetsandbox.cisco.com/RM/Topology?c=1c4570f4-4199-41e4-b677-fb3a6346f345). 
+3. Have a webex site to test against. While any site can be used, the easiest to test and learn on is one where SSO is NOT enabled. The below assumes you will be using a site with a simple username & password (others can be used, you'll just have to do a little more leg work). If you don't have a site you can always use the [developer sandbox provided on DevNet's page](https://devnetsandbox.cisco.com/RM/Topology?c=1c4570f4-4199-41e4-b677-fb3a6346f345). 
 
 ## Create a Meeting and Parse the Results
 
