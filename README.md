@@ -203,6 +203,7 @@ That should give you and output similar to the following:
 }
 
 ```
+Great, you've sucessfully completed this section. Feel free to adjust the code above or move on to one of the other tutorials below. 
 
 ## Bulk Delete Meetings
 
