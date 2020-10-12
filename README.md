@@ -212,7 +212,7 @@ Great, you've sucessfully completed this section. Feel free to adjust the code a
 
 ## License
 
-Provided under Cisco Sample Code License, for details see [LICENSE](./LICENSE.md)
+Provided under Cisco Sample Code License, for details see [LICENSE](./LICENSE)
 
 ## Code of Conduct
 
