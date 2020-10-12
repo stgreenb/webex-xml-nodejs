@@ -203,7 +203,7 @@ That should give you and output similar to the following:
 }
 
 ```
-Great, you've sucessfully completed this section. Feel free to adjust the code above or move on to one of the other tutorials below. You can also challange yourself to go futhre. How about writing some code that prompts the user for some basic webex info then creates the meeting based on their preferances. Or maybe bulk importing meeting info from a csv file and creating multiple meetings. 
+Great, you've sucessfully completed this section. Feel free to adjust the code above or move on to one of the other tutorials below. You can also challange yourself to go futhre. Maybe add some error handling. How about writing some code that prompts the user for some basic webex info then creates the meeting based on their preferances? Or maybe bulk importing meeting info from a csv file and creating multiple meetings. 
 
 ## Bulk Delete Meetings
 
