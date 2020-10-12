@@ -64,26 +64,26 @@ const parseString = require('xml2js').parseString;
 let xml = `
 <?xml version="1.0" encoding="UTF-8"?> 
 <serv:message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
-	<header>		
+<header>		
   <securityContext> 
     <webExID>steven</webExID> 
     <password>testing123!</password> 
     <siteName>my-sample-site</siteName> 
   </securityContext>	
-	</header>	
-	<body>		
-		<bodyContent xsi:type="java:com.webex.service.binding.meeting.CreateMeeting">
-			<accessControl>				
-				<meetingPassword>mp-123!</meetingPassword>			
-			</accessControl>			
-			<metaData>				
-				<confName>Sample Meeting</confName>			
-			</metaData>	
-			<schedule> 				
-				<startDate>12/02/2020 14:15:00</startDate>				
-			</schedule>		
-		</bodyContent>	
-	</body>
+</header>	
+<body>		
+	<bodyContent xsi:type="java:com.webex.service.binding.meeting.CreateMeeting">
+		<accessControl>				
+			<meetingPassword>mp-123!</meetingPassword>			
+		</accessControl>			
+		<metaData>				
+			<confName>Sample Meeting</confName>			
+		</metaData>	
+		<schedule> 				
+			<startDate>12/02/2020 14:15:00</startDate>				
+		</schedule>		
+	</bodyContent>	
+</body>
 </serv:message>
 `
 ```
