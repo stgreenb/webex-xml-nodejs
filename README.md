@@ -1,20 +1,20 @@
 # Interacting with the Webex XML API from NodeJS
 
-In this tutorial we are going to spend some time interacting with the Webex XML API from Node JS. If you are studying for your DevWBX certfication, this tutorial may help you along the way. 
+In this tutorial we are going to spend some time interacting with the Webex XML API from Node JS. If you are studying for your DevWBX certification, this tutorial may help you along the way. 
 
 ## Pre-Work
 
-1. This lab assumes that you already have some familarity with the [Webex XML API](https://developer.cisco.com/docs/webex-meetings/#!xml-api). Before coding against the API, you can go through [this learning lab](https://developer.cisco.com/learning/lab/collab-webex/step/1) to get some exposure. 
+1. This lab assumes that you already have some familiarity with the [Webex XML API](https://developer.cisco.com/docs/webex-meetings/#!xml-api). Before coding against the API, you can go through [this learning lab](https://developer.cisco.com/learning/lab/collab-webex/step/1) to get some exposure. 
 2. Have node.js installed, and have some experience with it. Need an intro to Node.js? See the [nodeschool](nodeschoo.io)
-3. Have a webex site to test against. While any site can be used, the easist to test and learn on is one where SSO is NOT enabled. The below assumes you will be using a site with a simple username & password (others can be used, you'll just have to do a little more leg work). If you don't have a site you can always the [developer sandbox provided on DevNet's page](https://devnetsandbox.cisco.com/RM/Topology?c=1c4570f4-4199-41e4-b677-fb3a6346f345). 
+3. Have a webex site to test against. While any site can be used, the easiest to test and learn on is one where SSO is NOT enabled. The below assumes you will be using a site with a simple username & password (others can be used, you'll just have to do a little more leg work). If you don't have a site you can always the [developer sandbox provided on DevNet's page](https://devnetsandbox.cisco.com/RM/Topology?c=1c4570f4-4199-41e4-b677-fb3a6346f345). 
 
 ## Create a Meeting and Parse the Results
 
 ### 1. Meeting Details XML
-The most basic funciton you might want to envoke with Webex is to create a meeting. This can be done with the [CreateMeeting]https://developer.cisco.com/docs/webex-xml-api-reference-guide/#!createmeeting) command. Asssuming you have some expousre to the Webex XML API you know that there are 2 key items you will need in the XML: 
+The most basic function you might want to invoke with Webex is to create a meeting. This can be done with the [CreateMeeting]https://developer.cisco.com/docs/webex-xml-api-reference-guide/#!createmeeting) command. Assuming you have some exposure to the Webex XML API you know that there are 2 key items you will need in the XML: 
 
 1. The Security Context details. In the most simple cases this will be the sitename, your webexid and your password. For the example below, the username is 'steven', the password is 'testing123!' and the site is 'my-sample-site.webex.com'. 
-2. Some basic details of your meeting (e.g. date, time, title, password, etc). In the example below the meeeting password is 'mp-123!', the title is 'Sample Meeting' and the start date & time are '12/02/2020 @2:15pm'. 
+2. Some basic details of your meeting (e.g. date, time, title, password, etc). In the example below the meeting password is 'mp-123!', the title is 'Sample Meeting' and the start date & time are '12/02/2020 @2:15pm'. 
 
 The above details mapped into the XML schema for creating a meeting would look like the following XML: 
 
@@ -50,13 +50,13 @@ Now that we have our XML is time to write our NodeJS code. There are many ways t
 
 ```npm install axios```
 
-Not only is the data that we are sending formattied in XML, but so will be the response. Manipulation of that data will be eaier if we can parse it into a native object/JSON. Again there are a lot of ways to parse that data but for this example we'll use the ['xml2js' package](https://www.npmjs.com/package/xml2js). 
+Not only is the data that we are sending formatted in XML, but so will be the response. Manipulation of that data will be easier if we can parse it into a native object/JSON. Again there are a lot of ways to parse that data but for this example we'll use the ['xml2js' package](https://www.npmjs.com/package/xml2js). 
 
 ```npm install xml2js```
 
-### 3. Weite the Base Code
+### 3. Write the Base Code
 
-The begining of our code is simple. Import the 2 librarys we are going to use and define the xml:
+The beginning of our code is simple. Import the 2 libraries we are going to use and define the xml.
 ```
 const axios = require('axios');
 const parseString = require('xml2js').parseString;
@@ -87,7 +87,7 @@ let xml = `
 </serv:message>
 `
 ```
-Now all that needs to be added is the command to send the request (via POST) to the webex api and show us the results. In this case we'll log response.data which is the response that was provided by the server, but the response schemea from Axios comtians a lot more. 
+Now all that needs to be added is the command to send the request (via POST) to the webex api and show us the results. In this case we'll log response.data which is the response that was provided by the server, but the response schema from Axios contains a lot more. 
 
 ```
 axios.post('https://api.webex.com/WBXService/XMLService', xml)
@@ -99,7 +99,7 @@ axios.post('https://api.webex.com/WBXService/XMLService', xml)
   });
 ```
 
-Copy the above two snipits of code into your favoriate development firendly editor (replacing the security context with your own) and run the file with node and you should get back a blob of xml like this (note you will get a raw output, I've done some formatting to the response to make it easier to read): 
+Copy the above two snippets of code into your favorite development friendly editor (replacing the security context with your own) and run the file with node and you should get back a blob of xml like this (note you will get a raw output, I've done some formatting to the response to make it easier to read): 
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -125,13 +125,13 @@ Copy the above two snipits of code into your favoriate development firendly edit
 </serv:message>
 ```
 
-Note: Each time you run this command you will be creating a new meeting. Depending on your envoroment, you may want to clean those up (see challange below)
+Note: Each time you run this command you will be creating a new meeting. Depending on your environment, you may want to clean those up (see next section)
 
 ### 4. Parse the Response
 
-Pulling a piece of the data out of the above response will be a lot eaier if we parse the data into an object. 
+Pulling a piece of the data out of the above response will be a lot easier if we parse the data into an object. 
 
-Remove or comment out the exsting console.log command from your code and repalce it with the following to parse the data prior to logging it: 
+Remove or comment out the existing console.log command from your code and replace it with the following to parse the data prior to logging it: 
 ```
     parseString(response.data, function (err, result) {
         console.log(result)
@@ -152,7 +152,7 @@ After running the output of which should look like this:
   }
 }
 ```
-While now a native object, there is some extra namespace prefixes that would be nice to remove (e.g. it will be easier to work with if we convert 'serv:body' to 'body'). xml2js has a processor that are will do that for you, 'stripPrefix'. Add one more require module for the proccessor towards the begining of your code. 
+While now a native object, there is some extra namespace prefixes that would be nice to remove (e.g. it will be easier to work with if we convert 'serv:body' to 'body'). xml2js has a processor that are will do that for you, 'stripPrefix'. Add one more require module for the processor towards the beginning of your code. 
 
 ```
 const stripNS = require('xml2js').processors.stripPrefix;
@@ -182,7 +182,7 @@ After running you should get the following XML with out the namespace:
   }
 }
 ```
-Most of the data you'd want work with is inside the body (Note some of objects are obscured abovve becase Node uses util.inspect to convert the object into strings and that function stops after depth=2 which is a bit low for most XML). Now that the XML is in a object and you've stripped off the namespace, you can easily access any of the data inside using simple dot notation. You can step by step dive deeper into the body object, but I can save you some time and simply have you now update your log command to:
+Most of the data you'd want work with is inside the body (Note some of objects are obscured above because Node uses util.inspect to convert the object into strings and that function stops after depth=2 which is a bit low this & most XML). Now that the XML is in a object and you've stripped off the namespace, you can easily access any of the data inside using simple dot notation. You can step by step dive deeper into the body object, but I can save you some time and simply have you now update your log command to:
 
 ```
 console.log(result.message.body[0].bodyContent[0]);
@@ -204,7 +204,7 @@ That should give you and output similar to the following:
 
 ```
 
-### Bulk Delete Meetings
+## Bulk Delete Meetings
 
 
 ## Listing Recordings
