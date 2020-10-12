@@ -209,3 +209,16 @@ Great, you've sucessfully completed this section. Feel free to adjust the code a
 
 
 ## Listing Recordings
+
+## License
+
+Provided under Cisco Sample Code License, for details see [LICENSE](./LICENSE.md)
+
+## Code of Conduct
+
+Our code of conduct is available [here](./CODE_OF_CONDUCT.md)
+
+## Contributing
+
+See our contributing guidelines [here](./CONTRIBUTING.md)
+
