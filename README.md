@@ -1,4 +1,4 @@
-# Interacting with the Webex XML API from NodeJS
+# Interacting with the Webex XML API from NodeJS/JavaScript
 
 In this tutorial we are going to spend some time interacting with the Webex XML API from Node JS. If you are studying for your [DevWBX certification](https://www.cisco.com/c/en/us/training-events/training-certifications/exams/current-list/devwbx-300-920.html), this tutorial may help you along the way. 
 
